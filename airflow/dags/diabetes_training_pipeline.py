@@ -213,4 +213,3 @@ def select_and_register(**kwargs):
 t_train = PythonOperator(task_id='train_models', python_callable=train_models, dag=dag)
 t_eval  = PythonOperator(task_id='select_and_register', python_callable=select_and_register, dag=dag)
 t_train >> t_eval
- 
